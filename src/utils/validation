@@ -1,0 +1,11 @@
+const validate = require("validator");
+
+const validateTrainiData = (req) => {
+    if (!validate.isEmail(email)) {
+        throw new Error("Please valid email")
+    }else if (!validate.isMobilePhone(phone)){
+        throw new Error("Please Enter valid Mobile Number");
+    }
+}
+
+module.exports = {validate}
